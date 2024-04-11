@@ -490,6 +490,6 @@ if __name__ == "__main__":
     try:
         print_instructions(instructions, output_folder)
     except IOError as e:
-        print >> sys.stderr, "Unable to write to output file %s" % output_file
+        print >> sys.stderr, "Unable to write to output file %s"
         sys.exit(1)
     sys.exit(0)
