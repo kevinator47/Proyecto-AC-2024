@@ -166,7 +166,7 @@
       <a name="tristate" val="false"/>
     </tool>
     <tool lib="0" name="Pin">
-      <a name="facing" val="west"/>
+      <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
       <a name="labelloc" val="east"/>
@@ -807,6 +807,7 @@
       <circ-anchor facing="east" height="6" width="6" x="87" y="47"/>
     </appear>
     <wire from="(850,90)" to="(900,90)"/>
+    <wire from="(830,190)" to="(830,200)"/>
     <wire from="(970,430)" to="(970,460)"/>
     <wire from="(770,170)" to="(770,200)"/>
     <wire from="(880,110)" to="(880,200)"/>
@@ -1139,6 +1140,10 @@
     <comp lib="0" loc="(980,490)" name="Tunnel">
       <a name="width" val="32"/>
       <a name="label" val="RAM INPUT 3"/>
+    </comp>
+    <comp lib="0" loc="(830,190)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="KBD ENABLE"/>
     </comp>
     <comp lib="0" loc="(160,950)" name="Pin">
       <a name="width" val="4"/>
@@ -2747,6 +2752,7 @@
       <text font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="361" y="163">Mask</text>
       <text font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="177" y="212">KBD Av</text>
       <text font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="214" y="212">KBD D</text>
+      <text font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="219" y="73">kbd En</text>
       <circ-port height="8" pin="150,150" width="8" x="156" y="56"/>
       <circ-port height="8" pin="150,180" width="8" x="176" y="56"/>
       <circ-port height="8" pin="130,540" width="8" x="126" y="206"/>
@@ -2766,6 +2772,7 @@
       <circ-port height="10" pin="950,910" width="10" x="375" y="155"/>
       <circ-port height="8" pin="110,950" width="8" x="176" y="216"/>
       <circ-port height="8" pin="160,980" width="8" x="206" y="216"/>
+      <circ-port height="10" pin="380,220" width="10" x="215" y="55"/>
       <circ-anchor facing="east" height="6" width="6" x="367" y="57"/>
     </appear>
     <wire from="(430,150)" to="(430,220)"/>
@@ -2782,9 +2789,9 @@
     <wire from="(940,180)" to="(940,210)"/>
     <wire from="(810,430)" to="(810,460)"/>
     <wire from="(690,170)" to="(730,170)"/>
-    <wire from="(410,200)" to="(410,220)"/>
     <wire from="(900,430)" to="(900,460)"/>
     <wire from="(730,430)" to="(730,460)"/>
+    <wire from="(410,190)" to="(410,220)"/>
     <wire from="(930,100)" to="(930,120)"/>
     <wire from="(380,420)" to="(380,450)"/>
     <wire from="(790,130)" to="(790,210)"/>
@@ -2797,7 +2804,6 @@
     <wire from="(860,170)" to="(860,210)"/>
     <wire from="(750,140)" to="(770,140)"/>
     <wire from="(150,150)" to="(300,150)"/>
-    <wire from="(390,200)" to="(410,200)"/>
     <wire from="(270,180)" to="(270,220)"/>
     <wire from="(830,160)" to="(860,160)"/>
     <wire from="(460,420)" to="(460,460)"/>
@@ -2877,6 +2883,10 @@
     </comp>
     <comp lib="0" loc="(950,150)" name="Tunnel">
       <a name="label" val="KBD AV"/>
+    </comp>
+    <comp lib="0" loc="(410,190)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="jr"/>
     </comp>
     <comp lib="0" loc="(960,390)" name="Tunnel">
       <a name="label" val="J"/>
@@ -2965,6 +2975,13 @@
     <comp lib="0" loc="(530,270)" name="Tunnel">
       <a name="width" val="2"/>
       <a name="label" val="ALU A"/>
+    </comp>
+    <comp lib="0" loc="(380,220)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="kbd En"/>
+      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(310,830)" name="Pin">
       <a name="width" val="32"/>
@@ -3120,10 +3137,6 @@
     <comp lib="0" loc="(660,350)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="D Load"/>
-    </comp>
-    <comp lib="0" loc="(390,200)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="jr"/>
     </comp>
     <comp lib="0" loc="(1220,730)" name="Pin">
       <a name="facing" val="west"/>
@@ -3296,6 +3309,7 @@
       <polyline fill="none" points="270,61 270,79" stroke="#000000"/>
       <polyline fill="none" points="409,180 350,180" stroke="#000000"/>
       <polyline fill="none" points="409,220 351,220" stroke="#000000"/>
+      <text font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="250" y="75">kbd En</text>
       <circ-port height="10" pin="940,540" width="10" x="405" y="225"/>
       <circ-port height="8" pin="90,620" width="8" x="116" y="236"/>
       <circ-port height="8" pin="180,620" width="8" x="146" y="56"/>
@@ -3324,6 +3338,7 @@
       <circ-port height="10" pin="460,860" width="10" x="405" y="205"/>
       <circ-port height="10" pin="1330,500" width="10" x="325" y="55"/>
       <circ-port height="10" pin="1080,880" width="10" x="255" y="255"/>
+      <circ-port height="10" pin="550,890" width="10" x="255" y="55"/>
       <circ-anchor facing="east" height="6" width="6" x="377" y="57"/>
     </appear>
     <wire from="(1100,460)" to="(1100,480)"/>
@@ -3430,6 +3445,7 @@
     <wire from="(960,510)" to="(960,540)"/>
     <wire from="(1800,470)" to="(1800,480)"/>
     <wire from="(780,770)" to="(780,800)"/>
+    <wire from="(550,860)" to="(550,890)"/>
     <wire from="(230,420)" to="(230,440)"/>
     <wire from="(1100,450)" to="(1100,460)"/>
     <wire from="(1200,510)" to="(1250,510)"/>
@@ -3462,6 +3478,13 @@
       <a name="label" val="func code"/>
     </comp>
     <comp loc="(1780,390)" name="Waiter"/>
+    <comp lib="0" loc="(550,890)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="kbd En"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="1" loc="(1150,770)" name="OR Gate">
       <a name="inputs" val="3"/>
     </comp>
@@ -5053,6 +5076,7 @@
       <text font-family="SansSerif" font-size="13" font-style="italic" font-weight="bold" text-anchor="middle" x="218" y="205">Interpreter</text>
       <text font-family="SansSerif" font-size="10" font-style="italic" font-weight="bold" text-anchor="middle" x="280" y="253">lw</text>
       <text font-family="SansSerif" font-size="10" font-style="italic" font-weight="bold" text-anchor="middle" x="299" y="253">sw</text>
+      <text font-family="SansSerif" font-size="8" font-style="italic" font-weight="bold" text-anchor="middle" x="320" y="253">kbd</text>
       <circ-port height="8" pin="40,450" width="8" x="146" y="126"/>
       <circ-port height="8" pin="40,480" width="8" x="106" y="126"/>
       <circ-port height="8" pin="40,510" width="8" x="126" y="126"/>
@@ -5071,6 +5095,7 @@
       <circ-port height="10" pin="1080,30" width="10" x="335" y="185"/>
       <circ-port height="10" pin="990,440" width="10" x="275" y="255"/>
       <circ-port height="10" pin="990,460" width="10" x="295" y="255"/>
+      <circ-port height="10" pin="990,490" width="10" x="315" y="255"/>
       <circ-anchor facing="east" height="6" width="6" x="217" y="127"/>
     </appear>
     <wire from="(670,460)" to="(730,460)"/>
@@ -5492,6 +5517,13 @@
       <a name="width" val="6"/>
       <a name="value" val="0x10"/>
     </comp>
+    <comp lib="0" loc="(990,490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="KBD En"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(90,140)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="6"/>
@@ -5696,6 +5728,10 @@
     <comp lib="1" loc="(230,280)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(990,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="kbd"/>
     </comp>
     <comp lib="3" loc="(170,380)" name="Comparator">
       <a name="width" val="6"/>
@@ -5941,12 +5977,12 @@
     <wire from="(1090,660)" to="(1090,680)"/>
     <wire from="(960,410)" to="(960,420)"/>
     <wire from="(140,670)" to="(140,680)"/>
+    <wire from="(1060,640)" to="(1100,640)"/>
     <wire from="(250,60)" to="(300,60)"/>
     <wire from="(1720,490)" to="(1720,500)"/>
     <wire from="(1720,610)" to="(1720,620)"/>
     <wire from="(1690,260)" to="(1690,270)"/>
     <wire from="(1650,220)" to="(1650,230)"/>
-    <wire from="(1040,640)" to="(1100,640)"/>
     <wire from="(810,950)" to="(850,950)"/>
     <wire from="(1970,500)" to="(1970,510)"/>
     <wire from="(600,330)" to="(600,360)"/>
@@ -6250,11 +6286,6 @@
       <a name="disabled" val="0"/>
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="0" loc="(1060,680)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="KBD Out"/>
-    </comp>
     <comp lib="0" loc="(1240,630)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="clk"/>
@@ -6353,6 +6384,11 @@
     <comp lib="0" loc="(580,920)" name="Tunnel">
       <a name="width" val="2"/>
       <a name="label" val="ALU SEL A"/>
+    </comp>
+    <comp lib="0" loc="(1060,680)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="ticks"/>
     </comp>
     <comp lib="0" loc="(260,170)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -6647,11 +6683,6 @@
     <comp lib="0" loc="(580,1000)" name="Tunnel">
       <a name="label" val="HiLo Load"/>
     </comp>
-    <comp lib="0" loc="(1040,640)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="ticks"/>
-    </comp>
     <comp lib="0" loc="(570,310)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
@@ -6906,6 +6937,11 @@
     <comp lib="0" loc="(1440,1100)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="RAM RW"/>
+    </comp>
+    <comp lib="0" loc="(1060,640)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="KBD Out"/>
     </comp>
     <comp lib="0" loc="(1430,1090)" name="Tunnel">
       <a name="facing" val="east"/>
